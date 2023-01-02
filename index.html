@@ -133,21 +133,21 @@ flexibility(document.documentElement);
 <p>trade them&nbsp;</p>
 <p><span style="font-style: inherit; font-weight: inherit;">hold them</span></p>
 <p>sugar them</p>
-<p>Gold diggers represent the next generation of art as nfts.&nbsp;</p>
+<p>Gold diggers represent a new generation of art & investments as nfts.&nbsp;</p>
 <p>3333 will be the total of gold diggers ever minted.&nbsp;</p>
 <p>69 will be reserved for dev team and community giveaways.</p>
-<p>Whitelist minting price will be 0.02 e</p>
-<p>public sale minting price will be 0.05 e</p>
+<p>Whitelist minting price will be $39.99 worth of eth.</p>
+<p>public sale minting price will be $79.99 worth of eth.</p>
 <p><img class="alignnone wp-image-572 size-full" src="https://dev-golddiggers.pantheonsite.io/wp-content/uploads/2022/08/gds-2.png" alt="" width="1179" height="452" srcset="https://dev-golddiggers.pantheonsite.io/wp-content/uploads/2022/08/gds-2.png 1179w, https://dev-golddiggers.pantheonsite.io/wp-content/uploads/2022/08/gds-2-300x115.png 300w, https://dev-golddiggers.pantheonsite.io/wp-content/uploads/2022/08/gds-2-1024x393.png 1024w, https://dev-golddiggers.pantheonsite.io/wp-content/uploads/2022/08/gds-2-768x294.png 768w" sizes="(max-width: 1179px) 100vw, 1179px" /></p>
 <p><strong>FAQS</strong></p>
 <p>How to mint?</p>
-<p>Minting site will be provided at the time of each specific stage</p>
+<p>Minting site will be provided at the time of each specific stage.</p>
 <p>what is your roadmap?</p>
-<p>get as many suggar daddys as possible and then some</p>
+<p>get as many suggar daddys as possible and then some.</p>
 <p>How many gold diggers can I mint on each stage?</p>
-<p>Whitelist can mint 1 gold digger per wallet and public sale can mint up to 3 gold diggers per wallet in one transaction</p>
+<p>Whitelist can mint 1 gold digger per wallet and public sale can mint up to 3 gold diggers per wallet in one transaction.</p>
 <p>when will mint go live?</p>
-<p>mint date will be announced in our official social media platforms so join our culture at discord &amp; twitter</p>
+<p>mint date will be announced in our official social media platforms so join our culture at discord &amp; twitter.</p>
 <p><span style="font-style: inherit; font-weight: inherit;">Join our culture.</span></p>						</div>
 				</div>
 				<div class="elementor-element elementor-element-4f727f2 elementor-absolute elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="4f727f2" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="social-icons.default">
@@ -327,3 +327,10 @@ var elementorAdminBarConfig = {"elementor_edit_page":{"id":"elementor_edit_page"
 			</script>
 				</body>
 </html>
+
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
